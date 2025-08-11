@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --color-startBlue: #0052cc;
+  --color-endBlue: #29a8f0;
+  --color-backGround: #6994c5;
+  --color-textColor: #ffffff62;
+  --color-backGround2: rgba(255, 255, 255, 0.15);
+  --color-colorBorder: rgba(255, 255, 255, 0.18);
+  --backgroundImage-uncheck-icon: url("/component/TodoList/unchecked.png");
+}
