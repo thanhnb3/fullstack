@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import icon from "./icon.png";
 import unchecked from "./unchecked.png";
 import checked from "./checked.png";
+import BackHome from "./component/BackHome.jsx";
 
 export default function App() {
   const [items, setItems] = useState(() => {
@@ -44,6 +45,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#153667] to-[#4e085f] p-3 md:p-6">
+      <BackHome />
       <div className="mx-auto mt-16 w-full max-w-[540px] rounded-xl bg-white p-8 pb-16 shadow-lg">
         <h2 className="mb-5 flex items-center text-2xl font-bold text-[#002765]">
           To-do List
