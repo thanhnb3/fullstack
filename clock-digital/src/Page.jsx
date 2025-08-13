@@ -17,6 +17,11 @@ export default function Page() {
           Todo List
         </button>
       </Link>
+      <Link to="/quizz">
+        <button className="absolute top-20 left-80 animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+          Quizz App
+        </button>
+      </Link>
     </div>
   );
 }

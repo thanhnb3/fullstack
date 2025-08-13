@@ -3,6 +3,7 @@ import MainClock from "./component/Clock/MainClock.jsx";
 import Page from "./Page.jsx";
 import Calculate from "./component/Calculate/Calculate.jsx";
 import TodoList from "./component/TodoList/TodoList.jsx";
+import QuizzApp from "./component/quizz/QuizzApp.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/main-clock" element={<MainClock />} />
           <Route path="/calculate" element={<Calculate />} />
           <Route path="/todolist" element={<TodoList />} />
+          <Route path="/quizz" element={<QuizzApp />} />
         </Routes>
       </div>
     </Router>
