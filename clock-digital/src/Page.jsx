@@ -22,6 +22,11 @@ export default function Page() {
           Quizz App
         </button>
       </Link>
+      <Link to="/profile">
+        <button className="absolute top-90 left-110 animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+          Profile
+        </button>
+      </Link>
     </div>
   );
 }
