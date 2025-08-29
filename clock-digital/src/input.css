@@ -1,12 +1,208 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
+/* ---- Base Layer ---- */
 
-@theme {
-  --font-roboto: "Roboto", sans-serif;
-  --color-startBlue: #0052cc;
-  --color-endBlue: #29a8f0;
-  --color-backGround: #6994c5;
-  --color-textColor: #ffffff62;
-  --color-backGround2: rgba(255, 255, 255, 0.15);
-  --color-colorBorder: rgba(255, 255, 255, 0.18);
-  --backgroundImage-uncheck-icon: url("/component/TodoList/unchecked.png");
+@layer base {
+  :root {
+    --progress-number-bg: theme("colors.n.100");
+    --progress-number-color: theme("colors.n.500");
+    --progressbar-fill: linear-gradient(
+      to right,
+      theme("colors.p.500"),
+      theme("colors.p.900")
+    );
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-base font-inter overflow-x-clip;
+  }
+
+  p {
+    @apply text-sm leading-7 font-inter;
+  }
+
+  button {
+    @apply px-1 py-1 border cursor-pointer;
+  }
+
+  li {
+    @apply text-xs md:text-sm font-inter lg:text-base text-n-500 cursor-pointer;
+  }
+}
+
+/* ---- Components Layer ---- */
+
+/* 
+--------------------
+TEA THEME
+--------------------
+
+*/
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      theme("colors.p.600"),
+      theme("colors.p.900")
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Partner logo */
+  .sub_heading {
+    @apply text-xs font-medium uppercase font-inter text-p-900;
+  }
+  .main_heading {
+    @apply mt-2 text-2xl tracking-wide capitalize lg:text-3xl font-lobster;
+  }
+
+  .logo-ticker-image {
+    @apply w-auto h-6 lg:h-9;
+  }
+
+  .btn {
+    @apply flex items-center justify-center gap-2 px-4 py-2 text-sm tracking-wider text-white transition-colors duration-300 bg-p-900 hover:bg-p-700 border-p-900 font-inter lg:py-3 lg:px-9;
+  }
+
+  /*products-tabs */
+
+  /* 
+--------------------
+TEA THEME
+--------------------
+
+*/
+
+  .tab-link {
+    @apply text-n-500 font-bold tracking-wider hover:text-n-700;
+  }
+  .tabContainer {
+    @apply flex flex-col w-full gap-8 bg-white md:flex-row md:gap-16 md:items-center;
+
+    > div {
+      @apply w-full my-auto;
+    }
+
+    h3 {
+      @apply text-3xl font-bold  capitalize lg:text-4xl;
+    }
+    h4 {
+      @apply mt-4 text-xl font-semibold text-p-900 md:mt-8;
+    }
+
+    p {
+      @apply max-w-full mt-5;
+    }
+
+    button {
+      @apply flex-none mt-4 md:mt-8;
+    }
+  }
+  .productImg {
+    @apply w-full md:w-1/2 h-[250px] md:h-[700px] md:rounded-tr-[80px] md:rounded-br-[80px] object-cover;
+  }
+
+  /* nav link */
+  .navLink {
+    @apply text-base font-medium leading-none tracking-wide capitalize cursor-pointer text-n-700 hover:text-n-800;
+  }
+  .mobileNavLink {
+    @apply text-white;
+  }
+}
+
+/* ---- Utilities Layer ---- */
+
+/* 
+--------------------
+TEA THEME
+--------------------
+
+*/
+
+@layer utilities {
+  .my_container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    width: 100%;
+    overflow-x: clip;
+    max-width: 1536px;
+  }
+
+  @screen md {
+    .my_container {
+      @apply px-[4.5rem] py-12;
+    }
+  }
+
+  /* LOGO logos-wrapper */
+
+  .logos-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    width: max-content;
+    animation: move-left 10s linear infinite;
+  }
+
+  @keyframes move-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* PRODUC */
+
+  .slide-up {
+    animation: slideUp 0.5s ease forwards;
+  }
+  .fade-out {
+    animation: fadeOut 0.5s ease forwards;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Features */
+  .feature-card {
+    @apply h-[400px] w-[368px] flex flex-col justify-center items-center p-[36px] gap-[36px]  [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] transition-all duration-500 bg-center bg-no-repeat bg-cover;
+  }
+
+  #features h3 {
+    @apply relative z-0 text-xl font-semibold tracking-widest text-white uppercase transition-all duration-500 translate-y-16 group-hover:translate-y-4;
+  }
+
+  #features p {
+    @apply relative z-0 text-center text-white transition-all duration-500 translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0;
+  }
+
+  .feature-filter {
+    @apply absolute inset-0 transition-all duration-500 opacity-50 bg-p-700 group-hover:bg-p-900 group-hover:opacity-80 -z-10;
+  }
 }

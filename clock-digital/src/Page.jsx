@@ -8,11 +8,6 @@ export default function Page() {
             Main Clock
           </button>
         </Link>
-        <Link to="/calculate">
-          <button className="animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
-            Calculate
-          </button>
-        </Link>
         <Link to="/todolist">
           <button className="animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
             Todo List
