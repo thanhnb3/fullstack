@@ -28,6 +28,16 @@ export default function Page() {
             Tea
           </button>
         </Link>
+        <Link to="/learning">
+          <button className="animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            Learning
+          </button>
+        </Link>
+        <Link to="/quizApp_ver2">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            Quiz App Ver2
+          </button>
+        </Link>
       </div>
     </div>
   );
