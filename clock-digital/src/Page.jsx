@@ -38,6 +38,16 @@ export default function Page() {
             Quiz App Ver2
           </button>
         </Link>
+        <Link to="https://todox-roiv.onrender.com/">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            TodoX fullStack
+          </button>
+        </Link>
+        <Link to="https://spotify-cl-lake.vercel.app/">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            Clone Spotify
+          </button>
+        </Link>
       </div>
     </div>
   );
