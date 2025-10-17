@@ -48,6 +48,11 @@ export default function Page() {
             Clone Spotify
           </button>
         </Link>
+        <Link to="https://youtube-clone-five-gold.vercel.app/">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            Clone Youtube
+          </button>
+        </Link>
       </div>
     </div>
   );
