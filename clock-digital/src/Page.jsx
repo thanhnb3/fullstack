@@ -28,11 +28,6 @@ export default function Page() {
             Tea
           </button>
         </Link>
-        <Link to="/learning">
-          <button className="animate-bounce block w-30 h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
-            Learning
-          </button>
-        </Link>
         <Link to="/quizApp_ver2">
           <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
             Quiz App Ver2
@@ -51,6 +46,11 @@ export default function Page() {
         <Link to="https://youtube-clone-five-gold.vercel.app/">
           <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
             Clone Youtube
+          </button>
+        </Link>
+        <Link to="https://edusity-iota-orcin.vercel.app/">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            Edusity
           </button>
         </Link>
       </div>
