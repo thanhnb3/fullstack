@@ -53,6 +53,11 @@ export default function Page() {
             Edusity
           </button>
         </Link>
+        <Link to="https://bluesun-web.vercel.app/">
+          <button className="animate-bounce block w-auto h-10 p-2 bg-blue-400 rounded-2xl hover:cursor-pointer text-white font-semibold">
+            BlueSun
+          </button>
+        </Link>
       </div>
     </div>
   );
